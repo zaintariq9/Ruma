@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+h1, h2, h3, h4, h5, h6 {
+        font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+
+/*Gender section CSS*/
+
+
+
+section.gender-sel-sec {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.virtual-heading-blk p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.virtual-heading-blk h2 {
+    font-weight: 600;
+    font-family: 'Montserrat';
+    font-size: 60px;
+    position: relative;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.virtual-heading-blk h2::before {
+    content: '';
+    width: 150px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    height: 8px;
+    background: #C3965D;
+}
+
+.gender-sel-btn {
+    margin-top: 100px;
+}
+
+.gndr-btn {
+    border: 1px solid #C3965D;
+    background: transparent;
+    padding: 30px 50px;
+    margin: 0 60px;
+    border-radius: 10px;
+    width: 260px;
+    height: 260px;
+    transition: 0.6s all;
+}
+
+.gndr-btn h4 {
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 25px;
+}
+
+
+.gndr-btn:hover {
+    background: #c3965d;
+}
+
+.gndr-btn:hover img {
+    filter: brightness(10);
+}
+
+.gndr-btn:hover h4 {
+    color: #fff;
+}
+
+
+
+
+
+/*Toggle Switch CSS*/
+
+
+
+.front-back-btn input[type="checkbox"] {
+       position: relative;
+       width: 80px;
+       height: 25px;
+       -webkit-appearance: none;
+       appearance: none;
+       background: #E4E2E2;
+       outline: none;
+       border-radius: 2rem;
+       cursor: pointer;
+    }
+
+.front-back-btn input[type="checkbox"]::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #C3965D;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+.front-back-btn input[type="checkbox"]:checked::before {
+        background: #c9b594;
+        left: 70%;
+    }
+
+.front-back-btn input[type="checkbox"]:checked {
+        background: #ebe5dc;
+    }
+
+.front-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.front-back-btn h6 {
+    margin: 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.frnt-bck-toggler {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+/*Guidancee section CSS*/
+
+
+.guidance-section {
+    opacity: 0;
+    visibility: hidden;
+    height: 0px !IMPORTANT;
+    display: none;
+}
+
+.gender-sel-sec.active {
+    position: absolute;
+    opacity: 0;
+    height: 0 !IMPORTANT;
+}
+
+.guidance-section.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: 100% !important;
+    display: block;
+}
+
+
+.gender-parts-selection {border-left: 1px solid #C3965D;}
+
+.toggle-finish-row {
+    border-top: 1px solid #C3965D;
+}
+
+.toggle-finish-row .col-md-6:not(:last-child) {
+    border-right: 1px solid #C3965D;
+}
+
+.toggle-finish-row .finish-consult-blk {
+    text-align: center;
+}
+
+.toggle-finish-row .finish-consult-blk a {
+    color: #C3965D;
+    text-decoration: unset;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+
+.guide-content-blk h3 {
+    color: #222222;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.guide-list {
+    margin: 0 !IMPORTANT;
+    padding: 0;
+}
+
+.guide-list li {
+    list-style: none;
+    margin-bottom: 15px;
+    position: relative;
+    font-family: 'Poppins';
+    font-size: 18px;
+    padding-left: 24px;
+}
+
+.guide-list li::before {
+    content: '';
+    left: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background: #C3965D;
+    bottom: 0;
+    margin: auto 0;
+    border-radius: 100px;
+}
+
+.gender-images-col {
+    text-align: center;
+}    
+
+
+.men-front, .female-front {
+    background: url('./man-front.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+}
+
+.men-front svg, .men-back svg, .female-back svg, .female-front svg {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.men-front svg .face-part, .men-front svg .leg-part, .men-front svg .body-part {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.female-front svg .face-part, .female-front svg .leg-part, .female-front svg .body-part {
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.female-front svg .face-part:hover, .female-front svg .leg-part:hover, .female-front svg .body-part:hover {
+    opacity: 0.3 !important;
+}
+
+
+.men-front svg .face-part:hover, .men-front svg .leg-part:hover, .men-front svg .body-part:hover {
+    opacity: 0.3 !important;
+}
+
+.female-front {
+    background: url('./female-front.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain !important;
+}
+
+.female-back {
+    background: url('./female-back.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+}
+
+.men-back, .female-back {
+    background: url(./man-back.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    height: 0px !IMPORTANT;
+}
+
+.men-back svg {
+    opacity: 0;
+}
+.female-back svg {
+    opacity: 0;
+    position: relative;
+}
+
+.men {
+    position: relative;
+    display: none;
+}
+
+
+.men-front.active, .female-front.active {
+    opacity: 0;
+    height: 0;
+}
+
+.men-back.active, .female-back.active {
+    position: relative;
+    height: auto !important;
+    opacity: 1;
+}
+.women {
+    display: none;
+    position: relative;
+}
+.men.active, .women.active {
+    display: block;
+}
+.guidance-row {
+    height: 100%;
+}
+
+.men-front svg {
+    position: relative;
+}
+
+.men-back.active svg {
+    opacity: 1;
+    position: relative;
+}
+.female-back.active svg {
+    opacity: 1;
+}
+
+.female-front svg {
+    position: relative;
+    top: -6px;
+    left: 2px;
+}
+
+
+.svg-opacity {
+    opacity: 0;
+    transition: 0.6s all;
+    fill: #2af4cd;
+}
+
+.men-front .thigh-front.hover, .men-front .hand-front.hover, .men-front .waist-front.hover, .men-front .chest-front.hover, .men-front .face-front.hover, .men-front .leg-front.hover {
+    opacity: 0.5 !important;
+    cursor: pointer;
+}
+
+.men-back .waist-back.hover, .men-back .hand-back.hover, .men-back .thigh-back.hover, .men-back .leg-back.hover {
+    opacity: 0.5 !important;
+    cursor: pointer;
+}
